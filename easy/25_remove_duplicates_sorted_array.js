@@ -33,6 +33,8 @@ function removeDuplicates(nums) {
   for(let i = 1; i < nums.length; i++) {
     if (nums[slower] !== nums[faster]) {
       slower++;
+      nums[slower] = nums[faster];
     }
   }
+  return slower + 1;
 }
