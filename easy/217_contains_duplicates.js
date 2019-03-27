@@ -23,3 +23,10 @@ function containsDuplicates(arr) {
 }
 
 console.log(containsDuplicates([1, 2, 3, 1]));
+
+
+/*
+Using a hash solution here:
+time complexity: O(n) linear
+space complexity: space used by hash is linear with # of ele in it.
+*/
