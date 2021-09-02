@@ -9,6 +9,7 @@ Input: [1,2,3,1]
 Output: true
 */
 
+/*
 function containsDuplicates(arr) {
   let hash = {};
 
@@ -22,11 +23,32 @@ function containsDuplicates(arr) {
   return false;
 }
 
-console.log(containsDuplicates([1, 2, 3, 1]));
-
+console.log(containsDuplicates([1, 2, 3, 1]));  // true
+*/
 
 /*
 Using a hash solution here:
 time complexity: O(n) linear
 space complexity: space used by hash is linear with # of ele in it.
 */
+
+
+
+// ALT SOLUTION USING A HASH
+
+const containsDuplicates = (nums) => {
+  let setOfNums = new Set();
+
+  for (let i = 0; i < nums.length; i++) {
+    if (setOfNums.has(nums[i])) {
+      return true;
+    } else {
+      setOfNums.add(nums[i]);
+    }
+  }
+  return false;
+}
+
+
+console.log(containsDuplicates([1, 2, 3, 1]));
+console.log(containsDuplicates([1,2,3,4]));
