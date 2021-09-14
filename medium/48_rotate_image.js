@@ -42,5 +42,4 @@ const rotate = (matrix) => {
 let matrix = [[1,2],[3,4]];
 // Output: [[3,1],[4,2]]
 
-
 console.log(rotate(matrix));
